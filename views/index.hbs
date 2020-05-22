@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    {{> header}}
+    <div class="main">
+    <form class="fileupload" id="form">
+  <div class="update"> 
+    <input type="file" class="choose" id="upfile" >
+<label for="upfile">Choose a file</label> 
+<p class="filename">No file chosen</p>
+</div> 
+ <button type="submit" class='convert' id="con" >Convert</button>
+    </form>
+    <div class="loader" id="load">
+    <div class="lds-ring" id="loader" style="display: none;"><div></div><div></div><div></div><div></div></div>
+    </div>
+</div>
+
+    {{> footer}}
+<script src="./main.js"></script>
+
+</body>
+</html>

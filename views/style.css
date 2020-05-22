@@ -1,0 +1,241 @@
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+  }
+  :root {
+    --header--color: coral;
+    --main-color: linear-gradient(to right ,rgb(226, 127, 127)   0%, #E77170 50%,  rgb(223, 151, 151)   100%);
+  }
+
+
+  body{
+      margin: 0;
+      padding: 0;
+  }
+  @keyframes downloadin {
+    0%   {opacity: 0;transform: rotate(0deg);}
+    40%  {opacity: 0.5;transform: rotate(100deg);}
+    100%  {opacity: 1;transform: rotate(360deg);}
+  }
+  
+  @keyframes downloadout {
+    0%   {opacity: 1;transform: rotate(0);}
+    40%  {opacity: 0.7;transform: rotate(-50deg);}
+    100%  {opacity: 0;transform: rotate(-360deg);}
+  }
+  
+  
+
+
+
+
+.main{
+    background-image: var(--main-color);
+    width: 80vw;
+    height: 80vh;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+}
+.loader{
+
+    text-align: center;
+}
+.download{
+  margin: auto;
+    cursor: pointer;
+    width: 10vw;
+    height: 30vh;
+    color: black;
+    font-style: italic;
+    text-align: center;
+    border: 1px white solid;
+    border-radius: 10%;
+    background: none;
+    color: white;
+   box-shadow: -1rem 1rem 0.2rem 0 #cfcfcf;
+   overflow: hidden;
+  animation-duration: 1s ;
+}
+.name{
+    width: 8vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.download:hover{
+    
+   box-shadow: 0.3rem 0.5rem 0.2rem 0 #cfcfcf;
+}
+form {
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    vertical-align: middle;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+}
+.update{
+    display: flex;
+    flex-direction: row;
+}
+label {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: black;
+    font-style: italic;
+    display: inline-block;
+    height: 8rem;
+    width: 20rem;
+    padding-top: 4rem ;
+    text-align: center;
+    border: 1px white solid;
+    border-radius: 10%;
+    background: none;
+    color: white;
+    transition: 1s;
+}
+
+label:hover{
+    background-color: rgb(173, 116, 116);
+    color: rgb(189, 189, 189);
+    cursor: pointer;
+}
+.filename{
+    font-size: 2rem;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5rem;
+    font-family: monospace;
+}
+.con{
+    flex-shrink: 3;
+}
+.choose{
+  display: none;
+}
+.convert{
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    font-style: italic;
+
+    display: inline-block;
+    height: 5rem;
+    width: 20rem;
+    border: 1px white solid;
+    border-radius: 10%;
+    background: none;
+    border-radius: 10%;
+    transition-duration: 2s;
+    
+}
+.convert:hover{
+    background-color: rgb(173, 116, 116);
+    color: rgb(189, 189, 189);
+    cursor: pointer;
+}
+.disable{
+    
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+    font-style: italic;
+    background-color: #D6D6D6;
+    display: inline-block;
+    height: 5rem;
+    width: 20rem;
+    border: none;
+    border-radius: 10%;
+    transition-duration: 2s;
+}
+.disable:hover{
+    cursor: not-allowed;
+}
+
+.header{
+    height: 10vh;
+    width: 80vw;
+
+    background-image: var(--main-color); 
+    margin: auto;
+}
+.header .logo{
+float: left;
+padding-left: 1rem ;
+}
+.header h1{
+  font-size: 5rem;
+  display: inline;
+  background: linear-gradient(to right,#6a89cc 0%,  #a6b3cf  100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+}
+.footer{
+    
+    height: 10vh;
+    background-color: #d1d4db;
+    width: 80vw;
+    margin: auto;
+    position: relative;   
+     background-image: var(--main-color); 
+
+}
+.footer .text{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+
+}
+.footer p{
+    font-size: 2rem;
+    display: inline-block;
+
+}
+
+
+
+
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
