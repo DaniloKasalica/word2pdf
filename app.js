@@ -3,9 +3,9 @@ const upload = require('express-fileupload');
 const hbs = require('hbs')
 const mymodule = require('./mymodules/convert.js')
 const app = express();
+const host = "word2pdfk.herokuapp.com"
 
 // for parsing application/json
-app.use(upload()); 
 
 
 app.set('view engine', 'hbs');
@@ -50,4 +50,4 @@ app.post('/upload',(req,res)=>{
     }
     }
 })
-app.listen(3000);
+app.listen(process.env.PORT || 5000);
