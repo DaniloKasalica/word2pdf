@@ -49,7 +49,7 @@ app.post('/upload',(req,res)=>{
         })
     }
     else{
-        res.send('ne moze ajstore')
+        res.send('Go back, file is not word')
     }
     }
 })
