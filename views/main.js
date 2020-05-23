@@ -33,7 +33,7 @@ file.append('upfile', fileInput.files[0]);
 console.log(fileInput.files[0])
 const name = fileInput.files[0].name
 let url1 = "http://localhost:3000/upload"
-let url2= "url='https://wordf2pdf.herokuapp.com/upload'"
+let url2= "https://wordf2pdf.herokuapp.com/upload"
   postData(url2, file)
 
   .then(resp => resp.blob())

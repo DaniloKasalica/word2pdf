@@ -20,6 +20,9 @@ app.get('/style.css',(req,res)=>{
 app.get('/main.js',(req,res)=>{
     res.sendFile(__dirname+'/views/main.js')
 })
+app.get('/upload',(req,res)=>{
+    res.send('testetestest')
+})
 app.post('/upload',(req,res)=>{
     if(req.files.upfile){
         const file = req.files.upfile;//sve o fajlu
