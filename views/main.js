@@ -1,33 +1,32 @@
 const btn  = document.getElementsByClassName('chosen')[0];
 const convert=  document.getElementById('con');
 const down = document.getElementById('download');
-
-
-var name=''
-
-setInterval(() => {
-
- const x = document.getElementById("upfile").value
-
-   if(x){
+const fileInput = document.getElementById('upfile')
+fileInput.addEventListener('change',(e)=>{
+  const x =   e.target.value
+  
+  if(x){
     convert.className='convert'
     var a = x.substring( 12,x.length)
     document.getElementsByClassName('filename')[0].innerHTML= x.substring( 12,x.length) ;
     convert.disabled=false;
 
    }
+   
    else{
     convert.className='disable'
     convert.disabled=true;
     document.getElementsByClassName('filename')[0].innerHTML= 'No file chosen'
     
-   }
-},2000)
+}
+})
 
+var name=''
 
 convert.addEventListener('click',(e)=>{
+  
+ fileInput = document.getElementById('upfile')
 e.preventDefault();
- const fileInput= document.getElementById('upfile')
  const file = new FormData();
 file.append('upfile', fileInput.files[0]);
 console.log(fileInput.files[0])
