@@ -32,7 +32,7 @@ e.preventDefault();
 file.append('upfile', fileInput.files[0]);
 console.log(fileInput.files[0])
 const name = fileInput.files[0].name
-  postData(url='https://wordf2pdf.herokuapp.com//upload', file)
+  postData(url='https://wordf2pdf.herokuapp/upload', file)
 
   .then(resp => resp.blob())
       .then(blob => {
