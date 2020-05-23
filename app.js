@@ -3,10 +3,10 @@ const upload = require('express-fileupload');
 const hbs = require('hbs')
 const mymodule = require('./mymodules/convert.js')
 const app = express();
-const host = "word2pdfk.herokuapp.com"
 
 // for parsing application/json
 
+app.use(upload()); 
 
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + "/views/partals")
