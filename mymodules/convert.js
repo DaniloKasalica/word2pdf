@@ -23,6 +23,7 @@ const extend = '.pdf'
   return new Promise((resolve,reject)=>{
     libre.convert(data, extend, undefined, (err, done) => {
     if (err) {
+      console.log(data)
       reject(`Error converting file: ${err}`);
     }
     resolve(done)
